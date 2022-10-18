@@ -1,0 +1,11 @@
+SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* head, int data, int pos) {
+    SinglyLinkedListNode* n = new SinglyLinkedListNode(data);
+    int i=1;
+    SinglyLinkedListNode* temp = head;
+    while(i++<pos){
+        temp = temp->next;
+    }
+    n->next = temp->next;
+    temp->next = n;
+    return head;
+}
