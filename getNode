@@ -1,0 +1,15 @@
+int getNode(SinglyLinkedListNode* head, int posT) {
+    int count = 1;
+    SinglyLinkedListNode* t = head;
+    while(t->next != NULL){
+        count++;
+        t = t->next;
+    }
+    SinglyLinkedListNode* temp = head;
+    int i=1;
+    while(i++<(count-posT)){
+        temp = temp->next;
+    } 
+    int ans = temp->data;
+    return ans; 
+}
